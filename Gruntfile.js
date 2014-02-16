@@ -29,7 +29,7 @@ module.exports = function (grunt) {
    */
 
   var cssFilesToInject = [
-    'linker/**/*.css'
+    'linker/styles/*.css'
   ];
 
 
@@ -42,6 +42,13 @@ module.exports = function (grunt) {
    */
 
   var jsFilesToInject = [
+    'linker/app/bower_components/angular/angular.js',
+    'linker/app/bower_components/angular-resource/angular-resource.js',
+    'linker/app/bower_components/angular-route/angular-route.js',
+    'linker/app/bower_components/angular-cookies/angular-cookies.js',
+    'linker/app/bower_components/angular-mocks/angular-mocks.js',
+    'linker/app/bower_components/angular-sanitize/angular-sanitize.js',
+    'linker/app/bower_components/angular-scenario/angular-scenario.js',
 
     // Below, as a demonstration, you'll see the built-in dependencies 
     // linked in the proper order order
@@ -59,7 +66,7 @@ module.exports = function (grunt) {
     // *->    put other dependencies here   <-*
 
     // All of the rest of your app scripts imported here
-    'linker/**/*.js'
+    'linker/app/scripts/**/*.js'
   ];
 
 
@@ -146,6 +153,12 @@ module.exports = function (grunt) {
           cwd: './assets',
           src: ['**/*.!(coffee)'],
           dest: '.tmp/public'
+        },
+        {
+        expand: true,
+        cwd: './assets/linker/app/views',
+        src: ['**/*.!(coffee)'],
+        dest: './assets/views'
         }
         ]
       },

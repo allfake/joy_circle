@@ -28,10 +28,17 @@
     -->
 
     <!--STYLES-->
+    <link rel="stylesheet" href="/linker/styles/application.css">
+    <link rel="stylesheet" href="/linker/styles/bootstrap-combined.min.css">
+    <link rel="stylesheet" href="/linker/styles/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="/linker/styles/main.css">
     <!--STYLES END-->
   </head>
 
   <body>
+    <!-- Add your site or application content here -->
+    <%- include header %>
+    
     <%- body %>
 
 
@@ -58,6 +65,7 @@
     -->
 
     <!--TEMPLATES-->
+    <script type="text/javascript" src="/jst.js"></script>
     <!--TEMPLATES END-->
 
 
@@ -84,6 +92,21 @@
     -->
 
     <!--SCRIPTS-->
+    <script src="/linker/app/bower_components/angular/angular.js"></script>
+    <script src="/linker/app/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/linker/app/bower_components/angular-route/angular-route.js"></script>
+    <script src="/linker/app/bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="/linker/app/bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="/linker/app/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/linker/app/bower_components/angular-scenario/angular-scenario.js"></script>
+    <script src="/linker/js/socket.io.js"></script>
+    <script src="/linker/js/sails.io.js"></script>
+    <script src="/linker/js/app.js"></script>
+    <script src="/linker/app/scripts/app.js"></script>
+    <script src="/linker/app/scripts/controllers/main.js"></script>
+    <script src="/linker/app/scripts/directives/mydirective.js"></script>
+    <script src="/linker/app/scripts/filters/myfilter.js"></script>
+    <script src="/linker/app/scripts/services/myservice.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>
