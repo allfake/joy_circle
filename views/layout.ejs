@@ -31,11 +31,10 @@
     <link rel="stylesheet" href="/linker/styles/application.css">
     <link rel="stylesheet" href="/linker/styles/bootstrap-combined.min.css">
     <link rel="stylesheet" href="/linker/styles/bootstrap-responsive.min.css">
-    <link rel="stylesheet" href="/linker/styles/main.css">
     <!--STYLES END-->
   </head>
 
-  <body>
+  <body ng-app="linkerApp">
     <!-- Add your site or application content here -->
     <%- include header %>
     
@@ -107,6 +106,7 @@
     <script src="/linker/app/scripts/directives/mydirective.js"></script>
     <script src="/linker/app/scripts/filters/myfilter.js"></script>
     <script src="/linker/app/scripts/services/myservice.js"></script>
+    <script src="/linker/app/scripts/services/socket.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>
