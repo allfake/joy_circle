@@ -148,10 +148,10 @@ module.exports = function (grunt) {
     copy: {
       dev: {
         files: [
-          {
+        {
           expand: true,
           cwd: './assets',
-          src: ['**/*.!(coffee)'],
+          src: ['**!(node_modules)/*.!(coffee)'],
           dest: '.tmp/public'
         },
         {
