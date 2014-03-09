@@ -150,4 +150,55 @@ form.ng-invalid .btn[disabled], form.ng-valid .btn {
 }
 
 
+.window {
+  position: relative;
+  height: 800px;
+  width: 100%;
+}
+.game-window {
+  position: absolute;
+  height: 500px;
+  width: 500px;
 
+  margin: 0 auto;
+
+  border: 3px rgb(182, 182, 182) dotted;
+  border-radius: 10px;  
+
+  -webkit-transition: 0.4s ease-out all;
+  -moz-transition: 0.4s ease-out all;
+  -ms-transition: 0.4s ease-out all;
+  -o-transition: 0.4s ease-out all;
+  transition: 0.4s ease-out all;
+}
+
+.ball {
+  position: absolute;
+  left: 250px;
+  top: 250px;
+
+  width: 40px;
+  height: 40px;
+
+  border: 3px rgb(255, 221, 221) solid;
+  background-color: rgb(255, 148, 148);
+
+  border-radius: 25px;
+  -webkit-transition: 0.4s ease-out all;
+  -moz-transition: 0.4s ease-out all;
+  -ms-transition: 0.4s ease-out all;
+  -o-transition: 0.4s ease-out all;
+  transition: 0.4s ease-out all;
+
+}
+
+.controller {
+  z-index: 3;
+  position: relative;
+
+  border: 2px rgb(183, 195, 199) solid;
+  width: 110px;
+  border-radius: 3px;
+  margin: 0 auto;
+
+}

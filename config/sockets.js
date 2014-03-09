@@ -35,7 +35,6 @@ module.exports.sockets = {
   },
 
 
-
   // `transports`
   //
   // A array of allowed transport methods which the clients will try to use.
