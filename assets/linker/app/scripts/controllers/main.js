@@ -2,7 +2,7 @@
 
 angular.module('linkerApp')
   .controller('MainCtrl', function ($scope, $socket) {
-    var moveRange = 50;
+    var moveRange = 5;
     var windowFrame = { width: 500, height: 500}    
 
     $scope.position = {top: '250px', left:'600px'};
@@ -17,6 +17,45 @@ angular.module('linkerApp')
     $socket.on('serialport', function(data) {
       var pad = data.data.split(",");
       var padData;
+
+      var direction = {
+        UP: parseInt(pad[0].split(":")[1], 10),
+        DOWN: parseInt(pad[1].split(":")[1], 10),
+        LEFT: parseInt(pad[2].split(":")[1], 10),
+        RIGHT: parseInt(pad[3].split(":")[1], 10),
+        S: parseInt(pad[4].split(":")[1], 10),
+        E: parseInt(pad[5].split(":")[1], 10),
+        A: parseInt(pad[6].split(":")[1], 10),
+        X: parseInt(pad[7].split(":")[1], 10),
+        Y: parseInt(pad[8].split(":")[1], 10),
+      } 
+
+      if (direction.X < 0) {
+        $scope.left();
+      }
+
+      if (direction.X > 0) {
+        $scope.right();
+      }
+
+      if (direction.Y < 0) {
+        $scope.down();
+      }
+
+      if (direction.Y > 0) {
+        $scope.up();
+      }
+
+      var directions = ['UP', 'DOWN', 'LEFT', 'RIGHT'];
+
+      directions.forEach(function(d) {
+        if (direction[d] === 0) {
+          var method = d.toLowerCase();
+          $scope[method]();
+        }
+      });
+
+
       // to do to map for run function left right top left
     });
 

@@ -29,7 +29,6 @@ var serial_openned = false
 module.exports = {
     
    read: function (req, res) {
-     console.log("DO READ");
     
       var do_in_serial = function () {
         serialPort.on('data', function(data) {
@@ -44,7 +43,7 @@ module.exports = {
         serial_openned = true
       }
 
-     return res.json({result: ret});
+     return res.json({result: 'hello'});
   },
 
 
